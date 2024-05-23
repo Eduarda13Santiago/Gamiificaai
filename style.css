@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url(Fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 :root {
@@ -13,29 +13,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-
 .container-grid {
     width: 80vw;
     max-width: 1400px;
 
-    /* margin: 20px-Espaçamento externo de 20px*/
-    /* margin: 20px-Espaçamento 20px na vertical, 10px na horizontal*/
-    /* margin: 20px-Espaçamento 20px para cima, 10px na horizontal,5px para baixo*/
-    /*margin: 20px 10px 5px 2px-Espaçamento 20px para cima,10px para a direita,5px para baixo,2px para a esquerda*/
+    /* margin: 20px - Espaçamento externo de 20px */
+    /* margin: 20px 10px - Espaçamento 20px na vertical, 10px na horizontal */
+    /* margin: 20px 10px 5px - Espaçamento 20px para cima, 10px na horizontal, 5px para baixo */
+    /* margin: 20px 10px 5px 2px - Espaçamento 20px para cima, 10px para a direita, 5px para baixo, 2px para a esquerda */
 
     margin: 0 auto;
 }
 
-
 .banner {
     /* vh é a porcentagem da ALTURA da tela */
-    /* vw é a porcentagem da LARGURA  da tela */
+    /* vw é a porcentagem da LARGURA da tela */
     height: 100vh;
 
     background-repeat: no-repeat;
@@ -45,17 +44,16 @@ html {
     position: relative;
 }
 
-.primeiro-banner{
-    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8)100%), url(img/bg-room.png);
+.primeiro-banner {
+    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
 }
 
-.segundo-banner{
+.segundo-banner {
     background-image: linear-gradient(90deg, rgba(24, 104, 104, 0.8) 0%, rgba(53, 24, 104, 0.8)100%), url(img/bg-room.png);
 }
 
-.terceiro-banner{
-    background-image: linear-gradient(90deg, rgba(104, 24, 48, 1) 0%, rgba(53, 24, 104, 0.8)100%), url(img/bg-room.png);
-
+.terceiro-banner {
+    background-image: linear-gradient(90deg, rgba(104, 24, 48, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
 }
 
 #botao-voltar,
@@ -73,15 +71,42 @@ html {
 #botao-voltar svg,
 #botao-proximo svg {
     fill: #ffffff76;
-
 }
 
-#botao-voltar{
+#botao-voltar {
     left: 4%;
 }
 
-#botao-proximo{
+#botao-proximo {
     right: 4%;
+}
+
+.botoes {
+    width: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 4%;
+
+    left: calc(50% - 75px);
+
+}
+
+.botoes button {
+    width: 30px;
+
+    display: unset;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botoes button svg {
+    fill: #ffffff76;
 }
 
 header {
@@ -90,6 +115,7 @@ header {
 
 header button {
     display: none;
+    cursor: pointer;
 }
 
 header img {
@@ -103,7 +129,6 @@ header .container-grid {
     justify-content: space-between;
     align-items: center;
 }
-
 
 .menu {
     width: 700px;
@@ -138,7 +163,7 @@ header .container-grid {
 .conteudo-banner p {
     color: white;
 
-    font-family: 'Anta';
+    font-family: "Anta";
     font-size: 32px;
 }
 
@@ -163,7 +188,6 @@ header .container-grid {
     to {
         width: 100%;
     }
-
 }
 
 @keyframes cursor {
@@ -186,17 +210,16 @@ header .container-grid {
     flex-direction: column;
     justify-content: space-between;
 
-
     text-align: center;
 }
 
 h2 {
-    font-family: 'Anta';
+    font-family: "Anta";
     font-size: 28px;
 }
 
 #sobre p {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 17px;
 
     text-align: left;
@@ -217,9 +240,7 @@ h2 {
 
 .container-cards {
     display: flex;
-
     justify-content: space-between;
-
 }
 
 .card {
@@ -238,8 +259,7 @@ h2 {
 
     border-radius: 4px;
 
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
-
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
@@ -252,7 +272,7 @@ h2 {
 .card p {
     color: white;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 16px;
 
     text-align: left;
@@ -271,7 +291,7 @@ h2 {
 
     color: white;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 17px;
     font-weight: 600;
 
@@ -282,13 +302,12 @@ h2 {
 
 .card button:hover {
     background-color: #ad4929;
-
 }
 
 #portfolio {
     height: 250px;
 
-    background-image: url(img/bonecos.png );
+    background-image: url(img/bonecos.png);
     background-size: 250px;
 
     background-attachment: fixed;
@@ -296,7 +315,6 @@ h2 {
     position: relative;
 
     margin-bottom: 120px;
-
 }
 
 .filtro {
@@ -306,9 +324,8 @@ h2 {
     background-color: #47208bc2;
 
     position: absolute;
-    top: 0px;
-    left: 0px;
-
+    top: 0;
+    left: 0;
 }
 
 #portfolio .container-grid {
@@ -324,7 +341,7 @@ h2 {
 
     color: white;
 
-    font-family: 'Anta';
+    font-family: "Anta";
     font-size: 28px;
 
     z-index: 1;
@@ -376,7 +393,6 @@ h2 {
     justify-content: space-between;
 
     margin-bottom: 50px;
-
 }
 
 .campo-descricao {
@@ -389,7 +405,6 @@ h2 {
     justify-content: space-between;
 
     margin-bottom: 30px;
-
 }
 
 .campo input {
@@ -408,7 +423,6 @@ h2 {
 
 .campo-descricao textarea {
     color: white;
-
     background-color: #351868;
 
     border: none;
@@ -419,7 +433,6 @@ h2 {
     padding: 10px;
 
     resize: none;
-
 }
 
 .campo label,
@@ -429,12 +442,12 @@ h2 {
 
 .campo input,
 .campo-descricao textarea {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 17px;
 }
 
 .campo input::placeholder,
-.campo-descricao textarea ::placeholder {
+.campo-descricao textarea::placeholder {
     color: #a0a0a0;
 }
 
@@ -454,19 +467,19 @@ h2 {
     border-radius: 4px;
 
     font-size: 17px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     /* Bold */
 
     text-transform: uppercase;
 
     cursor: pointer;
+
     transition: background-color 500ms;
 }
 
 #contato form button:hover {
-    background-color: #ad4939;
-
+    background-color: #ad4929;
 }
 
 footer {
@@ -481,7 +494,6 @@ footer .container-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .redes-sociais {
@@ -491,13 +503,12 @@ footer .container-grid {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-
 }
 
 .redes-sociais p {
     color: #fff;
 
-    font-family: 'Anta';
+    font-family: "Anta";
     font-size: 24px;
 }
 
@@ -515,6 +526,10 @@ footer .container-grid {
 .icones-redes a:hover {
     color: var(--laranja-gamifica);
 }
+
+/* OK - Scroll nos links */
+/* OK - Favicon */
+/* Animação do banner */
 
 .menu-fechado {
     display: none;
@@ -572,184 +587,4 @@ footer .container-grid {
     }
 }
 
-@media screen and (max-width: 1080px) {
-    .container-cards {
-        flex-wrap: wrap;
-    }
-
-    .card {
-        height: 400px;
-
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 40%;
-    }
-
-    footer {
-        height: unset;
-
-    }
-
-    footer .container-grid {
-        padding: 80px;
-        flex-direction: column;
-
-    }
-
-    footer img {
-        margin-bottom: 100px;
-    }
-
-    footer p {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .redes-sociais {
-        align-items: center;
-
-    }
-
-}
-
-@media screen and (max-width: 800px) {
-    .card {
-        flex-basis: 45%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    #sobre {
-        height: unset;
-        margin-bottom: 40px;
-    }
-
-    #sobre h2 {
-        margin-bottom: 50px;
-    }
-
-    #sobre p {
-        margin-bottom: 30px;
-    }
-
-    #cases,
-    #contato {
-        margin-bottom: unset;
-    }
-
-    #porfolio a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .campo,
-    .campo-descricao,
-    #contato form button {
-        width: 75%;
-    }
-
-}
-
-@media screen and (max-width: 520px) {
-    .container-grid {
-        width: 90%;
-    }
-
-    header img {
-        width: 200px;
-    }
-
-    .banner {
-        background-size: cover;
-    }
-
-    .conteudo-banner p {
-        font-size: 24px;
-    }
-
-    nav.menu {
-        width: 100%;
-
-        display: none;
-    }
-
-    #sobre {
-        padding-right: 0px;
-
-        padding-left: 0px;
-    }
-
-    #sobre p {
-        width: 90%;
-        margin: 0 auto;
-        margin-bottom: 20px;
-
-    }
-
-    #cases.container-grid {
-        width: 100%;
-        margin: unset;
-    }
-
-    .container-cards {
-        flex-wrap: nowrap;
-
-        gap: 40px;
-
-        overflow-x: auto;
-    }
-
-    .card {
-        height: 400px;
-        width: 280px;
-
-        flex-basis: unset;
-    }
-
-    .card:first-child {
-        margin-left: 30px;
-    }
-
-    .card:last-child {
-        margin-right: 30px;
-    }
-
-    #portfolio {
-        margin-bottom: 0;
-    }
-
-    #contato {
-        padding-top: 150px;
-
-        background-color: var(--roxo-gamifica);
-        color: white;
-    }
-
-    #contato h2 {
-        margin-bottom: 0;
-    }
-
-    #contato form {
-        width: 100%;
-        border-radius: 0;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    header img {
-        width: 160px;
-    }
-
-    header svg {
-        width: 40px;
-    }
-
-    .conteudo-banner p {
-        font-size: 20px;
-    }
-
-    footer img {
-        width: 200px;
-    }
-}
+@media screen and (max-width: 1080px) {}

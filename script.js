@@ -1,52 +1,57 @@
 let menu = document.getElementById("menu")
-let iconebarras = document.getElementById("icone-barras")
+let iconeBarras = document.getElementById("icone-barras")
 let iconeX = document.getElementById("icone-x")
 
 function abreFechaMenu() {
-    //Menu fechadi - tem a classe menu-fechado
-    //Menu aberto - nao tem a classe menu-fechado
+    // Menu fechado - tem a classe menu-fechado
+    // Menu aberto - não tem a classe menu-fechado
 
-    //Se o menu contem a classe menu-fechado
+    // Alterna a classe "menu-fechado" no menu
+    // menu.classList.toggle("menu-fechado")
+
+    // Se o menu contem a classe menu-fechado
     if (menu.classList.contains("menu-fechado")) {
-        //Abrir o menu - remover a classe menu-fechado
+        // Abrir o menu - remover a classe menu-fechado
         menu.classList.remove("menu-fechado")
 
-        //Mostrar icone do x
+        // Esconder icone barras
+        iconeBarras.style.display = "none"
+
+        // Mostrar o icone do X
         iconeX.style.display = "inline"
-        //Esconder o icone-barras
-        iconebarras.style.display = "none"
 
     } else {
-        //Fechar o menu - adicionar a classe menu-fechado
+        // Fechar o menu - adicionar a classe menu-fechado
         menu.classList.add("menu-fechado")
 
-        //Mostrar icone-barras
-        iconebarras.style.display = "inline"
-        //Esconder o icone do x
+        // Esconder icone do X
         iconeX.style.display = "none"
+
+        // Mostrar o icone barras
+        iconeBarras.style.display = "inline"
 
     }
 }
 
 onresize = () => {
-
-    //Abrir o menu - remover a classe menu-fechado
+    // Abrir o menu - remover a classe menu-fechado
     menu.classList.remove("menu-fechado")
 
-    //Mostrar icone do x
-    iconeX.style.display = "inline"
-    //Esconder o icone-barras
-    iconebarras.style.display = "none"
+    // Esconder icone barras
+    iconeBarras.style.display = "none"
 
+    // Mostrar o icone do X
+    iconeX.style.display = "inline"
 }
 
-//Carrossel
+// Carrossel
 let banner = document.querySelector(".banner")
 
-//let slides = [0,1,2]
-//slides[0]-> primeiro-banner
-//slides[1]-> segundo-banner
-//slides[2]-> terceiro-banner
+// let slides = [0, 1, 2]
+// slides[0] -> primeiro-banner
+// slides[1] -> segundo-banner
+// slides[2] -> terceiro-banner
+
 let slides = [
     "primeiro-banner",
     "segundo-banner",
@@ -58,13 +63,46 @@ let slideAtual = 0
 banner.classList.add(slides[slideAtual])
 
 function mostrarProximoSlide() {
-    //Remover o slide anterior
+    // Remover o slide anterior
     banner.classList.remove(slides[slideAtual])
-    //Somar 1 na variavel slideAtual
-    slideAtual++
 
-    //Mostrar slide de acordo com o slideAtual
+    if (slideAtual < 2) {
+        // Somar 1 na variavel slideAtual
+        slideAtual++
+    } else {
+        //Voltar para o primeiro banner
+        slideAtual = 0
+    }
+
+    // Mostrar slide de acordo com o slide atual
     banner.classList.add(slides[slideAtual])
-
 }
 
+function mostrarSlideAnterior() {
+    // Remover o slide anterior
+    banner.classList.remove(slides[slideAtual])
+
+    if (slideAtual > 0) {
+        //Subtrair 1 na varivael slide Atual
+        slideAtual--
+    } else {
+
+        slideAtual = 2
+    }
+
+
+    // Mostrar slide de acordo com o slide atual
+    banner.classList.add(slides[slideAtual])
+}
+
+
+function selecionarSlide(indiceSlide) {
+    //Remove o slide atual
+    banner.classList.remove(slides[slideAtual])
+
+    //Atualiza a variavel com o indice de slide selecionado 
+    slideAtual = indiceSlide
+    
+    //Mostra o slide selecionado e salvo na variavel slideAtual
+    banner.classList.add(slides[slideAtual])
+}
